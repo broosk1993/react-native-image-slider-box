@@ -3,7 +3,7 @@ import {
   View,
   Image,
   ActivityIndicator,
-  TouchableOpacity,
+  TouchableWithoutFeedback,
   Dimensions,
 } from 'react-native';
 
@@ -84,7 +84,7 @@ export class SliderBox extends Component {
           position: 'relative',
           justifyContent: 'center',
         }}>
-        <TouchableOpacity
+        <TouchableWithoutFeedback
           key={index}
           underlayColor="transparent"
           disabled={disableOnPress}
@@ -111,7 +111,7 @@ export class SliderBox extends Component {
             }}
             {...this.props}
           />
-        </TouchableOpacity>
+        </TouchableWithoutFeedback>
         {!this.state.loading[index] && (
           <this.Loader
             index={index}
