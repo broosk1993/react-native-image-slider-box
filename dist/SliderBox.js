@@ -175,7 +175,7 @@ export class SliderBox extends Component {
         <Carousel
           autoplayDelay={autoplayDelay}
           layout={'default'}
-          useScrollView
+          useScrollView={this.props.isRTL ? false : true}
           data={images}
           ref={(c) => (this._ref = c)}
           loop={circleLoop || false}
@@ -201,4 +201,5 @@ const colors = {
 
 SliderBox.defaultProps = {
   ImageComponent: Image,
+  isRTL: false
 };
